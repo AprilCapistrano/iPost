@@ -13,6 +13,10 @@
                     <label for="full_name">Name</label>
                     <input type="text" name="full_name" class="form-control" value="{{ $user->full_name }} {{ $user->last_name }}" id="full_name">
                 </div>
+				<div class="form-group">
+                    <label for="full_name">E-Mail</label>
+                    <input type="text" name="email" class="form-control" value="{{ $user->email }}" id="email">
+                </div>
                 <div class="form-group">
                     <label for="phone_number">Phone Number</label>
                     <input type="text" name="phone_number" class="form-control" value="{{ $user->phone_number }}" id="last_name">
