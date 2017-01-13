@@ -24,9 +24,11 @@
                         <li><a href="{{ route('logout') }}">Logout</a></li>
                       </ul>
                     </div>
-                @else
-                        <li><a href="{{ route('pageSignUp') }}">Sign Up</a></li>
-                @endif
+                @elseif(Request::url() == 'http://127.0.0.1:8000')
+                    <li><a href="{{ route('pageSignUp') }}">Sign Up</a></li>
+                @elseif(Request::url() == 'http://127.0.0.1:8000/pagesignup')
+					<li><a href="{{ route('home') }}">Sign In</a></li>
+				@endif
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
